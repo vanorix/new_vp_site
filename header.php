@@ -16,9 +16,9 @@
         <div class="container">
             <div class="header-logo">
                 <a href="<?php bloginfo('url'); ?>">
-                <?php if ( function_exists( 'the_custom_logo' ) ) {
-                    the_custom_logo();
-                } ?>
+                    <?php if ( function_exists( 'the_custom_logo' ) ) {
+                        the_custom_logo();
+                    } ?>
                 </a>
             </div>            
             <div class="btn-open">
