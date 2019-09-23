@@ -217,3 +217,46 @@ function codex_proyectos_init() {
 
 	register_post_type( 'proyecto', $args );
 }
+/**************************************
+    POST TYPE ARTICULOS
+**************************************/
+add_action( 'init', 'codex_articulo_init' );
+/**
+ * Register articulos post type.
+ *
+ */
+function codex_articulo_init() {
+	$labels = array(
+		'name'               => _x( 'Articulos', 'post type general name', 'vpsite' ),
+		'singular_name'      => _x( 'Articulo', 'post type singular name', 'vpsite' ),
+		'menu_name'          => _x( 'Articulos', 'admin menu', 'vpsite' ),
+		'name_admin_bar'     => _x( 'Articulo', 'add new on admin bar', 'vpsite' ),
+		'add_new'            => _x( 'Add new', 'Articulo', 'vpsite' ),
+		'add_new_item'       => __( 'Add new Articulo', 'vpsite' ),
+		'new_item'           => __( 'New Articulos', 'vpsite' ),
+		'edit_item'          => __( 'Edit Articulo', 'vpsite' ),
+		'view_item'          => __( 'View Articulo', 'vpsite' ),
+		'all_items'          => __( 'All Articulos', 'vpsite' ),
+		'search_items'       => __( 'Search Articulos', 'vpsite' ),
+		'parent_item_colon'  => __( 'Parent Articulos:', 'vpsite' ),
+		'not_found'          => __( 'No Articulos found.', 'vpsite' ),
+		'not_found_in_trash' => __( 'No Articulos found in Trash.', 'vpsite' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'description'        => __( 'Description.', 'vpsite' ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'articulo' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null
+	);
+
+	register_post_type( 'articulo', $args );
+}
