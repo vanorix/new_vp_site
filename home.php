@@ -5,7 +5,8 @@
 
             <div class="home-posts">
                 <div class="post-thumbnail">
-                    <?php get_the_post_thumbnail_url(); ?>
+                    <?php $thumb = get_the_post_thumbnail_url(); ?>
+                    <img src="<?php echo $thumb; ?>" alt="">
                 </div>
                 <div class="entry-summary">
                     <div class="post-title">
