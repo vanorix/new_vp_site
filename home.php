@@ -12,7 +12,7 @@
                         <?php the_title(); ?>
                     </div>
                     <div class="post-date">
-                        <?php the_time(); ?>
+                        <?php the_date(); ?>
                     </div>
                 </div>
             </div>
