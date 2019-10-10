@@ -1,23 +1,33 @@
 <?php get_header(); ?>
 
     <div class="home-content">
-        <?php while ( have_posts() ) : the_post() ?>
-
-            <div class="home-posts">
-                <div class="post-thumbnail">
-                    <?php get_the_post_thumbnail_url(); ?>
+        <div class="home-title">
+            <h1>Sala de prensa</h1>
+        </div>
+        <div class="posts-container">
+        
+            <?php while ( have_posts() ) : the_post() ?>
+            
+                <div class="home-post">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="post-thumbnail">
+                        <?php $thumbnail = get_the_post_thumbnail_url(); ?>
+                            <img src="<?php echo $thumbnail; ?>" alt="">
+                        </div>
+                        <div class="entry-summary">
+                            <div class="post-title">
+                                <h2><?php the_title(); ?></h2>
+                            </div>
+                            <div class="post-date">
+                                <?php the_date(); ?>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="entry-summary">
-                    <div class="post-title">
-                        <?php the_title(); ?>
-                    </div>
-                    <div class="post-date">
-                        <?php the_time(); ?>
-                    </div>
-                </div>
-            </div>
+            
+            <?php endwhile; ?>
 
-        <?php endwhile; ?>
+        </div>
     </div>
 
 <?php get_footer(); ?>
