@@ -129,6 +129,42 @@ header .header-right .search input {
 }
 
 /**************************
+    GENERAL LIST STYLES
+**************************/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  li:last-child {
+    border: none;
+  }
+  
+  li, li a {
+    text-decoration: none;
+    color: #000;
+  
+    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+    display: block;
+    width: 200px;
+  }
+  
+  li:hover, li a:hover {
+    font-size: 30px;
+    background: #f6f6f6;
+  }
+
+/**************************
     MOBILE MENU
 **************************/
 .mobile-menu {
@@ -741,3 +777,91 @@ footer .footer-copy {
     width: 33.33%;
 }
 
+
+/**************************
+    ARTICULOS
+**************************/
+#articulo-archive {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#articulo-archive a {
+    color: #22569d;
+    -webkit-backface-visibility: hidden;
+    transition: all .1s ease-in;
+    outline: 0;
+    text-decoration: none;
+}
+
+.articulo {
+    width: 50%;
+}
+
+.articulo-imagen {
+    width: 25%;
+    float: left;
+    margin: 0 3% 0 0;
+    position: relative;
+}
+
+.articulo-cont {
+    overflow: hidden;
+    padding: 0;
+}
+
+.articulo-cont h5 {
+    margin: .2em 0;
+    font-size: 130%;
+    line-height: 1.2;
+    color: #22569d;
+    font-weight: 200;
+    letter-spacing: -.03em;
+    text-align: left;
+}
+
+.articulo-cont p {
+    padding: .4em 0;
+    line-height: 1.4;
+}
+
+.artitculo-date {
+    position: static;
+    color:#73767a;
+    padding: 0 0 .4em 0;
+    background: none;
+}
+
+.view-article {
+    color:#22569d;
+    background:#f9f9f9;
+    padding: .3em 1em;
+    font-size: 90%;
+    display: inline-block;
+}
+
+.view-article:hover {
+    color:#fff;
+    background:#22569d;
+}
+
+/**************************
+    ARTICULOS
+**************************/
+.post-wraper {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#main-content h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.post-imagen {
+    width: 50%;
+    margin: 0 auto;
+}
