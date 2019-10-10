@@ -144,43 +144,6 @@ pre {
 }
 
 /**************************
-    GENERAL LIST STYLES
-**************************/
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
-  border-bottom: 1px solid #ccc;
-}
-
-li:last-child {
-  border: none;
-}
-
-li,
-li a {
-  text-decoration: none;
-  padding: 10px;
-
-  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-  transition: font-size 0.3s ease, background-color 0.3s ease;
-  display: block;
-}
-
-li:hover,
-li a:hover {
-  font-size: 24px;
-  background: #f6f6f6;
-}
-
-/**************************
     MOBILE MENU
 **************************/
 .mobile-menu {
@@ -882,4 +845,41 @@ footer .footer-copy {
 .post-imagen {
   width: 50%;
   margin: 0 auto;
+}
+
+/**************************
+    RECONOCIMIENTOS STYLES
+**************************/
+.reconocimientos-vp ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reconocimientos-vp li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+.reconocimientos-vp li:last-child {
+  border: none;
+}
+
+.reconocimientos-vp li,
+.reconocimientos-vp li a {
+  text-decoration: none;
+  padding: 10px;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+  display: block;
+}
+
+.reconocimientos-vp li:hover,
+.reconocimientos-vp li a:hover {
+  font-size: 24px;
+  background: #f6f6f6;
 }
