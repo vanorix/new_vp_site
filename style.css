@@ -15,6 +15,13 @@ This theme, like WordPress, is licensed under the GPL.
   margin: 0;
   padding: 0;
 }
+*,
+*:after,
+*:before {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
 
 img {
   width: 100%;
@@ -126,6 +133,14 @@ header .header-right .search input {
 
 .header-menu ul li {
   list-style: none;
+}
+
+/**************************
+    GENERAL TEXT STYLES
+**************************/
+p,
+pre {
+  padding: 0.6em 0;
 }
 
 /**************************
