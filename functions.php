@@ -132,6 +132,7 @@ function codex_eventos_init() {
 	register_post_type( 'evento', $args );
 }
 
+add_action( 'init', 'create_cpt_eventos' );
 // EVENTOS
 function create_cpt_eventos(){
 	$labels = array(
@@ -167,7 +168,7 @@ function create_cpt_eventos(){
 	register_post_type('eventos', $args);
 }
 
-
+add_action( 'init', 'create_ct_eventos' );
 // CATEGORIAS EVENTOS
 function create_ct_eventos() {
 	$labels = array(
