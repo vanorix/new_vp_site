@@ -91,47 +91,6 @@ function codex_slides_init() {
 /**************************************
     POST TYPE EVENTOS
 **************************************/
-add_action( 'init', 'codex_eventos_init' );
-/**
- * Register a eventos post type.
- *
- */
-function codex_eventos_init() {
-	$labels = array(
-		'name'               => _x( 'Eventos', 'post type general name', 'vpsite' ),
-		'singular_name'      => _x( 'Evento', 'post type singular name', 'vpsite' ),
-		'menu_name'          => _x( 'Eventos', 'admin menu', 'vpsite' ),
-		'name_admin_bar'     => _x( 'Evento', 'add new on admin bar', 'vpsite' ),
-		'add_new'            => _x( 'Add New', 'Evento', 'vpsite' ),
-		'add_new_item'       => __( 'Add New Evento', 'vpsite' ),
-		'new_item'           => __( 'New Eventos', 'vpsite' ),
-		'edit_item'          => __( 'Edit Evento', 'vpsite' ),
-		'view_item'          => __( 'View Evento', 'vpsite' ),
-		'all_items'          => __( 'All Eventos', 'vpsite' ),
-		'search_items'       => __( 'Search Eventos', 'vpsite' ),
-		'parent_item_colon'  => __( 'Parent Eventos:', 'vpsite' ),
-		'not_found'          => __( 'No Eventos found.', 'vpsite' ),
-		'not_found_in_trash' => __( 'No Eventos found in Trash.', 'vpsite' )
-	);
-
-	$args = array(
-		'labels'             => $labels,
-		'description'        => __( 'Description.', 'vpsite' ),
-		'public'             => true,
-		'publicly_queryable' => true,
-		'show_ui'            => true,
-		'show_in_menu'       => true,
-		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'evento' ),
-		'capability_type'    => 'post',
-		'has_archive'        => true,
-		'hierarchical'       => false,
-		'menu_position'      => null
-	);
-
-	register_post_type( 'evento', $args );
-}
-
 add_action( 'init', 'create_cpt_eventos' );
 // EVENTOS
 function create_cpt_eventos(){
