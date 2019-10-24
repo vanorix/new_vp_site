@@ -10,4 +10,6 @@
 
 <?php get_template_part('./templates/dominicana') ?>
 
+<?php get_template_part('./templates/prensa') ?>
+
 <?php get_footer(); ?>
