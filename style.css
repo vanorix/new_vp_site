@@ -203,34 +203,55 @@ pre {
 @media (min-width: 1080px) {
   .main-menu {
       width: 100%;
-      display: block;
       display: flex;
       justify-content: center;
       z-index: 10;
       position: relative;
       padding: 10px 0px;
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(34, 107, 177, 0.6)
   }
 }
 
-nav.main-menu ul {
+.main-menu ul {
   width: 100%;
   max-width: 1180px;
   display: flex;
 }
 
-nav.main-menu ul li {
+.main-menu ul li {
   list-style: none;
 }
 
-nav.main-menu ul li a {
+.main-menu ul li a {
   padding: 10px;
   text-decoration: none;
   color: white;
 }
 
-nav.main-menu ul li a:hover {
+.main-menu ul li a:hover {
   background-color: #3a6aa6;
+}
+
+.main-menu ul li > ul {
+  width: 200px;
+  display: none;
+  flex-wrap: wrap;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: 10px;
+}
+
+.main-menu ul li:hover ul {
+  display: flex;
+}
+
+.main-menu ul li > ul li {
+  width: 100%;
+}
+
+.main-menu ul li > ul li a {
+  width: calc(100% - 20px);
+  display: block;
 }
 
 /**************************
