@@ -42,6 +42,8 @@ function themename_custom_logo_setup() {
 }
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 
+add_image_size('mini', 320, 180, true); // Mini Thumbnail
+
 /**************************************
     POST TYPE SLIDER
 **************************************/
@@ -89,45 +91,67 @@ function codex_slides_init() {
 /**************************************
     POST TYPE EVENTOS
 **************************************/
-add_action( 'init', 'codex_eventos_init' );
-/**
- * Register a eventos post type.
- *
- */
-function codex_eventos_init() {
+add_action( 'init', 'create_cpt_eventos' );
+// EVENTOS
+function create_cpt_eventos(){
 	$labels = array(
-		'name'               => _x( 'Eventos', 'post type general name', 'vpsite' ),
-		'singular_name'      => _x( 'Evento', 'post type singular name', 'vpsite' ),
-		'menu_name'          => _x( 'Eventos', 'admin menu', 'vpsite' ),
-		'name_admin_bar'     => _x( 'Evento', 'add new on admin bar', 'vpsite' ),
-		'add_new'            => _x( 'Add New', 'Evento', 'vpsite' ),
-		'add_new_item'       => __( 'Add New Evento', 'vpsite' ),
-		'new_item'           => __( 'New Eventos', 'vpsite' ),
-		'edit_item'          => __( 'Edit Evento', 'vpsite' ),
-		'view_item'          => __( 'View Evento', 'vpsite' ),
-		'all_items'          => __( 'All Eventos', 'vpsite' ),
-		'search_items'       => __( 'Search Eventos', 'vpsite' ),
-		'parent_item_colon'  => __( 'Parent Eventos:', 'vpsite' ),
-		'not_found'          => __( 'No Eventos found.', 'vpsite' ),
-		'not_found_in_trash' => __( 'No Eventos found in Trash.', 'vpsite' )
+		'name' 					=> __('Eventos', 'seiel'),
+		'singular_name' 		=> __('Evento', 'seiel'),
+		'menu_name' 			=> __('Eventos', 'seiel'),
+		'parent_item_colon'		=> __('Evento Padre', 'seiel'),
+		'all_items' 			=> __('Todos los Eventos', 'seielwp'),
+		'view_item' 			=> __('Ver Evento', 'seiel'),
+		'add_new_item' 			=> __('Agregar Nuevo Evento', 'seiel'),
+		'add_new' 				=> __('Agregar Nuevo', 'seiel'),
+		'edit_item' 			=> __('Editar Evento', 'seiel'),
+		'update_item'			=> __('Actualizar Evento', 'seiel'),
+		'new_item' 				=> __('Nuevo Evento', 'seiel'),
+		'edit' 					=> __('Editar', 'seiel'),
+		'view' 					=> __('Ver Evento', 'seiel'),
+		'all_items' 			=> __('Todos los Evento', 'seiel'),
+		'search_items' 			=> __('Buscar Evento', 'seiel'),
+		'not_found' 			=> __('No se encontraron Eventos', 'seiel'),
+		'not_found_in_trash' 	=> __('No se encontraron Eventos en la papelera', 'seiel')
 	);
-
 	$args = array(
-		'labels'             => $labels,
-		'description'        => __( 'Description.', 'vpsite' ),
-		'public'             => true,
-		'publicly_queryable' => true,
-		'show_ui'            => true,
-		'show_in_menu'       => true,
-		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'evento' ),
-		'capability_type'    => 'post',
-		'has_archive'        => true,
-		'hierarchical'       => false,
-		'menu_position'      => null
+		'labels' 				=> $labels,
+		'public' 				=> true,
+		'exclude_from_search'	=> true,
+		'show_in_nav_menus' 	=> false,
+		'menu_position' 		=> 22,
+		'menu_icon' 			=> 'dashicons-editor-table',
+		'supports' 				=> array( 'title', 'author', 'editor', 'thumbnail'),
+		'has_archive' 			=> true,
+		'can_export' 			=> true
 	);
+	register_post_type('eventos', $args);
+}
 
-	register_post_type( 'evento', $args );
+add_action( 'init', 'create_ct_eventos' );
+// CATEGORIAS EVENTOS
+function create_ct_eventos() {
+	$labels = array(
+		'name'              => _x( 'Tipos de Eventos', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Tipo de Evento', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Tipo' ),
+		'all_items'         => __( 'Todos los Tipos' ),
+		'parent_item'       => __( 'Tipo Padre' ),
+		'parent_item_colon' => __( 'Tipo Padre:' ),
+		'edit_item'         => __( 'Editar Tipo' ),
+		'update_item'       => __( 'Actualizar Tipo' ),
+		'add_new_item'      => __( 'Agregar Nuevo Tipo' ),
+		'new_item_name'     => __( 'Nuevo Tipo' ),
+		'menu_name'         => __( 'Tipos de Eventos' ),
+	);
+	$args = array(
+		'labels' 			=> $labels,
+		'show_in_nav_menus' => true,
+		'show_admin_column' => true,
+		'hierarchical' 		=> true,
+		'query_var'			=> true,
+		'rewrite' 			=> array( 'slug' => 'tipo'),
+	);
+	register_taxonomy('tipos', array('eventos'), $args);
 }
 
 /**************************************
@@ -255,7 +279,8 @@ function codex_articulo_init() {
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
-		'menu_position'      => null
+		'menu_position'      => null,
+		"supports" => array( "title", "editor", "thumbnail", "excerpt", "custom-fields", "revisions", "page-attributes", "post-formats" ),
 	);
 
 	register_post_type( 'articulo', $args );

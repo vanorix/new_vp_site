@@ -8,7 +8,7 @@
                 <div class="element-items">
                     <?php $loop = new WP_Query( 
                             array( 
-                                'post_type'         => 'evento', 
+                                'post_type'         => 'eventos', 
                                 'posts_per_page'    => 5
                             ) 
                         );
