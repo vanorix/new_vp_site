@@ -16,9 +16,9 @@
         <div class="container">
             <div class="header-logo">
                 <a href="<?php bloginfo('url'); ?>">
-                    <?php if ( function_exists( 'the_custom_logo' ) ) {
-                        the_custom_logo();
-                    } ?>
+                <?php if ( function_exists( 'the_custom_logo' ) ) {
+                    the_custom_logo();
+                } ?>
                 </a>
             </div>            
             <div class="btn-open">
@@ -46,29 +46,13 @@
         <div class="btn-close">
             <i class="fas fa-times"></i>
         </div>
-        <ul>
-            <li><a href=""><i class="fas fa-home"></i></a></li>
-            <li><a href="">Vicepresidencia</a></li>
-            <li><a href="">Vicepresidenta</a></li>
-            <li><a href="">Sala de Prensa</a></li>
-            <li><a href="">Multimedia</a></li>
-            <li><a href="">Discursos</a></li>
-            <li><a href="">Documentos</a></li>
-            <li><a href="">Eventos</a></li>
-            <li><a href="">Programa</a></li>
-        </ul>
+        <?php wp_nav_menu( array(
+            'menu'  => 'main-menu'
+        )); ?>
     </nav>
     <!-- MAIN MENU -->
     <nav class="main-menu">
-        <ul>
-            <li><a href=""><i class="fas fa-home"></i></a></li>
-            <li><a href="">Vicepresidencia</a></li>
-            <li><a href="">Vicepresidenta</a></li>
-            <li><a href="">Sala de Prensa</a></li>
-            <li><a href="">Multimedia</a></li>
-            <li><a href="">Discursos</a></li>
-            <li><a href="">Documentos</a></li>
-            <li><a href="">Eventos</a></li>
-            <li><a href="">Programa</a></li>
-        </ul>
+        <?php wp_nav_menu( array(
+            'menu'  => 'main-menu'
+        )); ?>
     </nav>

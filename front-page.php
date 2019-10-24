@@ -8,4 +8,6 @@
 
 <?php get_template_part('./templates/instagram-posts') ?>
 
+<?php get_template_part('./templates/dominicana') ?>
+
 <?php get_footer(); ?>
