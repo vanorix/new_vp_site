@@ -229,7 +229,7 @@ pre {
 }
 
 .main-menu ul li a:hover {
-  background-color: #3a6aa6;
+  background-color: rgb(255, 217, 0);
 }
 
 .main-menu ul li > ul {
@@ -259,7 +259,7 @@ pre {
 **************************/
 #slides {
   z-index: 5;
-  margin-top: -40px;
+  margin-top: -38px;
 }
 
 #slides .container {
