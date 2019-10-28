@@ -128,6 +128,7 @@ function create_cpt_eventos(){
 }
 
 add_action( 'init', 'create_ct_eventos' );
+
 // CATEGORIAS EVENTOS
 function create_ct_eventos() {
 	$labels = array(
@@ -241,6 +242,7 @@ function codex_proyectos_init() {
 
 	register_post_type( 'proyecto', $args );
 }
+
 /**************************************
     POST TYPE ARTICULOS
 **************************************/
