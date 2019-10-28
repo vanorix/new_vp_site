@@ -2,7 +2,7 @@
 
     <div id="eventos-archive">
         <?php if (have_posts()) : while (have_posts()) : the_post();
-            get_template_part( 'templates/eventos-nacionales');
+            get_template_part( 'templates/loop-eventos');
         endwhile;
             // get_template_part('pagination');
         else : ?>
