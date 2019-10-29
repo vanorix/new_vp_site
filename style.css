@@ -545,7 +545,7 @@ pre {
 }
 
 .seccion-dominicana .section-title {
-  width: 30%;
+  width: 100%;
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
@@ -597,7 +597,12 @@ pre {
 /**************************
     EVENTOS
 **************************/
-.page-title {
+main.eventos {
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.hero-title {
   width: 100%;
   height: 150px;
   display: flex;
@@ -605,7 +610,6 @@ pre {
   align-items: center;
   background-color: #226BB1;
   color: white;
-  margin-bottom: 80px;
 }
 
 .speakers {

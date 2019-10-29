@@ -95,23 +95,23 @@ add_action( 'init', 'create_cpt_eventos' );
 // EVENTOS
 function create_cpt_eventos(){
 	$labels = array(
-		'name' 					=> __('Eventos', 'seiel'),
-		'singular_name' 		=> __('Evento', 'seiel'),
-		'menu_name' 			=> __('Eventos', 'seiel'),
-		'parent_item_colon'		=> __('Evento Padre', 'seiel'),
-		'all_items' 			=> __('Todos los Eventos', 'seielwp'),
-		'view_item' 			=> __('Ver Evento', 'seiel'),
-		'add_new_item' 			=> __('Agregar Nuevo Evento', 'seiel'),
-		'add_new' 				=> __('Agregar Nuevo', 'seiel'),
-		'edit_item' 			=> __('Editar Evento', 'seiel'),
-		'update_item'			=> __('Actualizar Evento', 'seiel'),
-		'new_item' 				=> __('Nuevo Evento', 'seiel'),
-		'edit' 					=> __('Editar', 'seiel'),
-		'view' 					=> __('Ver Evento', 'seiel'),
-		'all_items' 			=> __('Todos los Evento', 'seiel'),
-		'search_items' 			=> __('Buscar Evento', 'seiel'),
-		'not_found' 			=> __('No se encontraron Eventos', 'seiel'),
-		'not_found_in_trash' 	=> __('No se encontraron Eventos en la papelera', 'seiel')
+		'name' 					=> __('Eventos', 'vpsite'),
+		'singular_name' 		=> __('Evento', 'vpsite'),
+		'menu_name' 			=> __('Eventos', 'vpsite'),
+		'parent_item_colon'		=> __('Evento Padre', 'vpsite'),
+		'all_items' 			=> __('Todos los Eventos', 'vpsite'),
+		'view_item' 			=> __('Ver Evento', 'vpsite'),
+		'add_new_item' 			=> __('Agregar Nuevo Evento', 'vpsite'),
+		'add_new' 				=> __('Agregar Nuevo', 'vpsite'),
+		'edit_item' 			=> __('Editar Evento', 'vpsite'),
+		'update_item'			=> __('Actualizar Evento', 'vpsite'),
+		'new_item' 				=> __('Nuevo Evento', 'vpsite'),
+		'edit' 					=> __('Editar', 'vpsite'),
+		'view' 					=> __('Ver Evento', 'vpsite'),
+		'all_items' 			=> __('Todos los Evento', 'vpsite'),
+		'search_items' 			=> __('Buscar Evento', 'vpsite'),
+		'not_found' 			=> __('No se encontraron Eventos', 'vpsite'),
+		'not_found_in_trash' 	=> __('No se encontraron Eventos en la papelera', 'vpsite')
 	);
 	$args = array(
 		'labels' 				=> $labels,
@@ -144,11 +144,13 @@ function create_ct_eventos() {
 		'new_item_name'     => __( 'Nuevo Tipo' ),
 		'menu_name'         => __( 'Tipos de Eventos' ),
 	);
+
 	$args = array(
 		'labels' 			=> $labels,
-		'show_in_nav_menus' => true,
-		'show_admin_column' => true,
 		'hierarchical' 		=> true,
+		'show_ui'			=> true,
+		'show_admin_column' => true,
+		'show_in_nav_menus' => true,
 		'query_var'			=> true,
 		'rewrite' 			=> array( 'slug' => 'tipo'),
 	);
