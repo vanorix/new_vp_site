@@ -158,6 +158,45 @@ function create_ct_eventos() {
 }
 
 /**************************************
+    POST TYPE DISCURSOS
+**************************************/
+add_action( 'init', 'create_cpt_discursos' );
+// EVENTOS
+function create_cpt_discursos(){
+	$labels = array(
+		'name' 					=> __('Discursos', 'vpsite'),
+		'singular_name' 		=> __('Discurso', 'vpsite'),
+		'menu_name' 			=> __('Discursos', 'vpsite'),
+		'parent_item_colon'		=> __('Discurso Padre', 'vpsite'),
+		'all_items' 			=> __('Todos los Discursos', 'vpsite'),
+		'view_item' 			=> __('Ver Discurso', 'vpsite'),
+		'add_new_item' 			=> __('Agregar Nuevo Discurso', 'vpsite'),
+		'add_new' 				=> __('Agregar Nuevo', 'vpsite'),
+		'edit_item' 			=> __('Editar Discurso', 'vpsite'),
+		'update_item'			=> __('Actualizar Discurso', 'vpsite'),
+		'new_item' 				=> __('Nuevo Discurso', 'vpsite'),
+		'edit' 					=> __('Editar', 'vpsite'),
+		'view' 					=> __('Ver Discurso', 'vpsite'),
+		'all_items' 			=> __('Todos los Discurso', 'vpsite'),
+		'search_items' 			=> __('Buscar Discurso', 'vpsite'),
+		'not_found' 			=> __('No se encontraron Discursos', 'vpsite'),
+		'not_found_in_trash' 	=> __('No se encontraron Discursos en la papelera', 'vpsite')
+	);
+	$args = array(
+		'labels' 				=> $labels,
+		'public' 				=> true,
+		'exclude_from_search'	=> true,
+		'show_in_nav_menus' 	=> false,
+		'menu_position' 		=> 22,
+		'menu_icon' 			=> 'dashicons-editor-table',
+		'supports' 				=> array( 'title', 'author', 'editor', 'thumbnail'),
+		'has_archive' 			=> true,
+		'can_export' 			=> true
+	);
+	register_post_type('discursos', $args);
+}
+
+/**************************************
     POST TYPE PROGRAMAS
 **************************************/
 add_action( 'init', 'codex_programas_init' );
