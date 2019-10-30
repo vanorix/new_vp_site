@@ -161,7 +161,7 @@ function create_ct_eventos() {
     POST TYPE DISCURSOS
 **************************************/
 add_action( 'init', 'create_cpt_discursos' );
-// EVENTOS
+// DISCURSOS
 function create_cpt_discursos(){
 	$labels = array(
 		'name' 					=> __('Discursos', 'vpsite'),
