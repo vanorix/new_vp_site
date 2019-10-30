@@ -704,6 +704,37 @@ main.eventos {
 }
 
 /**************************
+    DISCURSOS
+**************************/
+main.discursos {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+#discursos-archive {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#discursos-archive .container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#discursos-archive .container .discurso {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  background-color: #f5f5f5;
+}
+
+
+/**************************
     FOOTER
 **************************/
 footer {
