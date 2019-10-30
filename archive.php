@@ -2,7 +2,11 @@
 
     <div class="home-content">
         <div class="home-title">
-            <h1>Art&iacute;culos</h1>
+            <h1>
+                <?php if ( is_post_type_archive() ) { ?>
+                    <?php post_type_archive_title(); ?>
+                <?php } ?>
+            </h1>
         </div>
         <div class="posts-container">
         

@@ -294,10 +294,10 @@ add_action( 'init', 'codex_articulo_init' );
  */
 function codex_articulo_init() {
 	$labels = array(
-		'name'               => _x( 'Articulos', 'post type general name', 'vpsite' ),
-		'singular_name'      => _x( 'Articulo', 'post type singular name', 'vpsite' ),
-		'menu_name'          => _x( 'Articulos', 'admin menu', 'vpsite' ),
-		'name_admin_bar'     => _x( 'Articulo', 'add new on admin bar', 'vpsite' ),
+		'name'               => _x( 'Art&iacute;culos', 'post type general name', 'vpsite' ),
+		'singular_name'      => _x( 'Art&iacute;culo', 'post type singular name', 'vpsite' ),
+		'menu_name'          => _x( 'Art&iacute;culos', 'admin menu', 'vpsite' ),
+		'name_admin_bar'     => _x( 'Art&iacute;culo', 'add new on admin bar', 'vpsite' ),
 		'add_new'            => _x( 'Add new', 'Articulo', 'vpsite' ),
 		'add_new_item'       => __( 'Add new Articulo', 'vpsite' ),
 		'new_item'           => __( 'New Articulos', 'vpsite' ),
