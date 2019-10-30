@@ -1,6 +1,7 @@
 <div class="discurso">
     <div class="discurso-img">
-        <img src="<?php get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+        <?php $thumb = get_the_post_thumbnail_url(); ?>
+        <img src="<?php $thumb; ?>" alt="<?php the_title(); ?>">
     </div>
     <div class="discurso-detalles">
         <div class="discurso-title">
