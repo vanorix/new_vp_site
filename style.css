@@ -709,12 +709,14 @@ main.eventos {
 main.discursos {
   width: 100%;
   margin-bottom: 80px;
+  background-color: #f5f5f5;
 }
 
 #discursos-archive {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-top: 30px;
 }
 
 #discursos-archive .container {
@@ -730,7 +732,48 @@ main.discursos {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 30px;
-  background-color: #f5f5f5;
+  background-color: white;
+}
+
+@media (min-width: 1080px) {
+  #discursos-archive .container .discurso {
+    flex-wrap: nowrap;
+  }
+}
+
+.discurso-img {
+  width: 100%;
+  height: 350px;
+}
+
+.discurso-img img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.discurso .discurso-detalles {
+  width: 100%;
+  padding: 20px;
+}
+
+.discurso .discurso-title {
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.discurso-title a {
+  color: #73767a;
+  text-decoration: none;
+}
+
+.discurso-title a:hover {
+  color: #226bb1;
+}
+
+.discurso .discurso-text {
+  text-align: justify;
+  width: 100%;
 }
 
 
