@@ -3,9 +3,7 @@
         <div class="container">
             <?php $loop = new WP_Query( 
                 array( 
-                    'post_type'         => 'page',
-                    'pagename'          => 'inicio',
-                    'posts_per_page'    => -1
+                    'pagename'          => 'inicio'
                 ) 
             );
             if ( $loop->have_posts() ) :
@@ -30,14 +28,23 @@
                     'menu'  => 'menu-footer'
                 ) ); ?>
             </div>
-            <div class="footer-form">
-                <?php $form = get_field('formulario'); echo do_shortcode($form); ?>
-            </div>
-            <div class="footer-copy">
-                <p>                                                                    
-                © <?php echo date('Y'); ?> <?php the_field('copy'); ?>
-                </p>
-            </div>
+            <?php $loop = new WP_Query( 
+                array( 
+                    'pagename'          => 'inicio'
+                ) 
+            );
+            if ( $loop->have_posts() ) :
+                while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                    <div class="footer-form">
+                        <?php $form = get_field('formulario'); echo do_shortcode($form); ?>
+                    </div>
+                    <div class="footer-copy">
+                        <p>                                                                    
+                            © <?php echo date('Y'); ?> <?php the_field('copy'); ?>
+                        </p>
+                    </div>
+                <?php endwhile;
+            endif; wp_reset_postdata(); ?>
         </div>
     </footer>
     
