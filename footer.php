@@ -3,7 +3,7 @@
         <div class="container">
             <?php $loop = new WP_Query( 
                 array( 
-                    'pagename'          => 'inicio'
+                    'page_id'          => 18,
                 ) 
             );
             if ( $loop->have_posts() ) :
@@ -30,7 +30,7 @@
             </div>
             <?php $loop = new WP_Query( 
                 array( 
-                    'pagename'          => 'inicio'
+                    'page_id'          => 18,
                 ) 
             );
             if ( $loop->have_posts() ) :
