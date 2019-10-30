@@ -743,7 +743,7 @@ main.discursos {
 
 @media (min-width: 1080px) {
   #discursos-archive .container .discurso {
-    flex-wrap: nowrap;
+    width: calc((100% / 3) - 15px);
   }
 }
 
