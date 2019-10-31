@@ -328,3 +328,16 @@ function codex_articulo_init() {
 
 	register_post_type( 'articulo', $args );
 }
+
+// Pagination for paged posts
+function seiel_pagination(){
+	global $wp_query;
+	$big = 999999999;
+
+	echo paginate_links(array(
+		'base' => str_replace($big, '%#%', get_pagenum_link($big)),
+		'format' => '?paged=%#%',
+		'current' => max(1, get_query_var('paged')),
+		'total' => $wp_query->max_num_pages
+	));
+}
