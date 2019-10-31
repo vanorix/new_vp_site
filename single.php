@@ -9,8 +9,9 @@
       </div>
       
       <div class="rs-share row"><?php get_template_part('custom/social-share'); ?></div>
-      
-      <?php if ( has_post_thumbnail() ) {  ?>
+      <?php if(get_field('galeria_imagenes')) { ?>
+          <?php the_field('galeria_imagenes'); ?>
+      <?php } elseif ( has_post_thumbnail() ) {  ?>
         <div class="post-imagen">
             <?php   $speech_featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full', false );
                     echo "<img src='" . $speech_featured_image[0] . "' alt=''>";?>
