@@ -967,7 +967,7 @@ footer .footer-copy {
 }
 
 .post-thumbnail img {
-  width: auto;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -984,6 +984,32 @@ footer .footer-copy {
 
 .entry-summary .post-date {
   color: #226bb1;
+}
+
+/**************************
+    PAGINATION
+**************************/
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: gray;
+}
+
+.pagination .page-numbers {
+  background-color: white;
+  margin: 5px;
+  padding: 5px;
+}
+
+.pagination .current {
+  background-color: #226bb1;
+  color: white;
 }
 
 /**************************
