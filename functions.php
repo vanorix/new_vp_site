@@ -8,6 +8,10 @@ function theme_vpsite_style_scripts() {
     wp_enqueue_style( 'superslidescss', get_template_directory_uri() . '/css/superslides.css' );
     wp_enqueue_style( 'enlacescss', get_template_directory_uri() . '/css/enlaces.css' );
     wp_enqueue_script( 'script-vpsite', get_template_directory_uri() . '/scripts/scripts.js', array(), '1.0.0', true );
+	if(!is_front_page()) {
+		wp_enqueue_script( 'bxsliderjs', get_template_directory_uri() . '/scripts/bxslider.js', array(), '1.0.0', true );
+		wp_enqueue_style( 'bxslidercss', get_template_directory_uri() . '/css/bxslider.css' );
+		wp_enqueue_style( 'legacyStyles', get_template_directory_uri() . '/css/legacy.css' );	}
 }
 add_action( 'wp_enqueue_scripts', 'theme_vpsite_style_scripts' );
 
@@ -340,4 +344,15 @@ function seiel_pagination(){
 		'current' => max(1, get_query_var('paged')),
 		'total' => $wp_query->max_num_pages
 	));
+}
+
+
+/**************************************
+	GALLERY SHORTCODE
+	Agrega una version modificada del shortcode de la galeria de imagenes
+	para que funcione como un slider. Utiliza bxslider.js
+**************************************/
+add_action('after_setup_theme', 'add_gallery_shortcode');
+function add_gallery_shortcode() {
+	require_once('library/gallery-shortcode.php');
 }

@@ -1,0 +1,681 @@
+/* CODIGO CSS SACADO DEL PLUGIN CSS INSERTER EN EL SITIO ANTERIOR */
+
+/*IFRAME CONFERENCIA EN VIVO*/
+@media only screen and (min-width: 680px) {
+  #iframe-envivo {
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+  #iframe-envivo > iframe {
+    width: 800px;
+    height: 460px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #iframe-envivo > iframe {
+    width: 420px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  #iframe-envivo > iframe {
+    width: 360px;
+  }
+}
+/*FIN IFRAME CONFERENCIA EN VIVO*/
+
+/*OCULTANDO FOTO DESTADA Y CUADRO DE SUSCRIPCION*/
+#home-suscribete,
+#foto-destacada {
+  display: none !important;
+}
+
+/* START: Cortometrajes CTC Page ID 18390*/
+body.page-id-18390 {
+  background: #0199e6;
+}
+
+.page-id-18390 [id^="youmax_18390_"] {
+  background: #ffce00 !important;
+}
+
+#youmax_18390_6f39f76048 > div > div.yl-wrapper > div.yl-load-more-button {
+  display: none;
+}
+
+.page-id-18390 #main-footer {
+  background: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.page-id-18390 #container {
+  margin-bottom: 70px;
+}
+.page-id-18390 #main-content {
+  background: #ffce00;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: #006838;
+}
+.page-id-18390 #container {
+  background: #0199e6 !important;
+}
+.page-id-18390 strong {
+  color: #006838;
+  font-weight: 400;
+}
+.page-id-18390 #youtube-playlist-videos-PLMqhqBGM6qB_UrjNQ0NHb17Sks69TyU9p,
+#youtube-playlist-videos-PLMqhqBGM6qB_gM3Oprmljzj6jcZzkqLv1 {
+  color: #da592f;
+}
+
+/* END: Cortometrajes CTC Page ID 18390 */
+
+.page-id-16365 #main-header,
+.page-id-16365 #header-img,
+.page-id-16365 #footer-nav,
+.page-id-16365 #main-footer > div > div.linea,
+.page-id-16365 #main-nav {
+  display: none;
+}
+/*INICIO estilos de voces contra el hambre*/
+.page-id-16900 #main-header,
+.page-id-16900 #footer-nav,
+.page-id-16900 #main-footer > div > div.linea,
+.page-id-16900 #main-nav,
+.page-id-16900 .breadcrumbs {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .page-id-16900 #hashtag {
+    font-size: 0.7em;
+  }
+}
+
+.page-id-16365 #main-footer {
+  border-top: none !important;
+}
+
+.page-id-16900 #main-footer {
+  border-top: none !important;
+}
+
+.page-id-16365 .wrap {
+  padding-top: 0.5em;
+}
+
+.page-id-16900 .wrap {
+  padding-top: 0.5em;
+}
+
+body.page-id-16365 {
+  padding: 30px !important;
+  background: #e2a53f !important;
+}
+
+body.page-id-16900 {
+  padding: 7px !important;
+  background: #8f9638 !important;
+}
+
+.page-id-16365 #container {
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.page-id-16900 #container {
+  border-radius: 10px;
+}
+
+.page-id-16365 .youmax {
+  background: #ffffff !important;
+}
+
+.page-id-16900 .youmax {
+  background: #ffffff !important;
+}
+
+/*FIN estilos de voces contra el hambre*/
+.document-gallery .document-icon img {
+  width: 35% !important;
+}
+.document-gallery .document-icon .title {
+  margin: 15px;
+  font-size: 2em;
+  line-height: initial;
+}
+.document-gallery .document-icon {
+  margin-top: 50px;
+}
+
+.responsive-tabs .responsive-tabs__list__item {
+  padding: 10px 5px 10px !important;
+}
+
+/* BEGIN Responsive YouTube Video */
+.youtube-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* <-- 16:9 */
+  height: 0;
+}
+.youtube-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* END Responsive YouTube Video */
+
+/* Tabs Feria del Libro 2017 */
+.page-id-15332 .responsive-tabs-wrapper {
+  margin-bottom: none !important;
+  padding: 0.5em 2em 8em 2em;
+  background: #ce2e33;
+}
+.page-id-15332 .responsive-tabs .responsive-tabs__panel {
+  background: #fff;
+  border-radius: 10px !important;
+  border-top-left-radius: 10px !important;
+  padding: 1em 3em 1em 3em !important;
+  -webkit-box-shadow: 4px 4px 9px 1px rgb(74, 69, 69);
+  box-shadow: 4px 4px 9px 1px rgb(74, 69, 69);
+}
+.page-id-15332 .responsive-tabs .responsive-tabs__list__item {
+  color: #fff !important;
+  font-size: 20ox !important;
+}
+.page-id-15332 .responsive-tabs .responsive-tabs__list__item--active {
+  color: #22569d !important;
+}
+.page-id-15332 .responsive-tabs .responsive-tabs__list__item--active,
+.responsive-tabs .responsive-tabs__list__item--active:hover {
+  margin-bottom: 4px !important;
+}
+
+.page-id-15332 p {
+  line-height: 25px;
+}
+/* End Feria del libro 2017*/
+
+/* Parrafos con margen */
+.mleft {
+  margin-left: 25px;
+}
+.mleft35 {
+  margin-left: 35px;
+}
+
+/* END Parrafos*/
+
+/* Wrap video slider */
+.wrap-video {
+  width: 100%;
+}
+/* End wrap video slider */
+
+/* BEGIN General Custom Styles Here */
+#main-content ul {
+  margin-left: 12px;
+}
+
+.embed.mapa {
+  padding-top: 7%;
+}
+
+/* END General Custom Styles Here */
+
+/* BEGIN Multimedia */
+.galeria-de-videos .yl-header {
+  background-color: #22569d !important;
+}
+/* END Multimedia */
+
+/* BEGIN Home Featured */
+#home-featured-left {
+  padding-right: 1em;
+}
+#home-featured-right {
+  padding-left: 1em;
+}
+/* END Home Featured */
+
+/* BEGIN Tiempo Solidario Home Featured Button */
+.ts-more {
+  background: #f9f9f9;
+  width: 100%;
+  height: 34.55px;
+  padding: 0.5em;
+  text-align: center;
+  display: inline-block;
+}
+.ts-more:hover {
+  background: #22569d;
+  color: #fff;
+}
+/* END Tiempo Solidario Home Featured Button */
+
+/* BEGIN Tiempo solidario */
+.tiempo-solidario .youmax {
+  width: 95% !important;
+  border-radius: 15px;
+  margin-bottom: 35px !important;
+  box-shadow: 4px 4px 9px 1px rgba(130, 130, 130, 1);
+  -webkit-box-shadow: 4px 4px 9px 1px rgba(130, 130, 130, 1);
+  -moz-box-shadow: 4px 4px 9px 1px rgba(130, 130, 130, 1);
+}
+/* END tiempo solidario */
+
+/* BEGIN lightbox fixes */
+#fancybox-title {
+  margin-left: 0px !important;
+  font-size: 1em;
+}
+/* END lightbox fixes */
+
+/* BEGIN Hide Thumbnails on YouTube Widget in Page Home */
+.page-template-page-home .ytc-thumbnails {
+  display: none;
+}
+/* END Hide Thumbnails on YouTube Widget in Page Home */
+
+/* BEGIN Urban Music 2017 */
+.mu17-youtube-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* <-- 16:9 */
+  height: 0;
+}
+.mu17-youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mu17-row {
+  width: 100%;
+}
+.mu17-col {
+  width: 50%;
+  float: left;
+}
+/* END Urban Music 2017 */
+
+/* BEGIN Feria del libro */
+/* BEGIN Titles */
+.fdl-titles {
+  width: 94%;
+  margin: 0 auto;
+  padding: 5em 0 2em 0;
+  line-height: 1.6;
+  overflow: hidden;
+}
+/* END Titles */
+
+/* BEGIN Actividades */
+li.rpwe-li.rpwe-clearfix {
+  width: 33%;
+  float: left;
+}
+img.rpwe-alignleft.rpwe-thumb {
+  width: 100%;
+  margin: 0 0 14px 0;
+}
+.rpwe-block a {
+  font-size: 20px;
+}
+#fdl-actividades-mas {
+  width: 100%;
+  text-align: center;
+  padding-top: 1.4em;
+}
+/* END Actividades */
+
+/* BEGIN Pabellon */
+#fdl-header {
+  width: 100%;
+  height: 500px;
+  background: url("/vpsite/wp-content/uploads/feria-del-libro-pabellon-vp.jpeg")
+    no-repeat center;
+  position: relative;
+}
+.fdl-hdr-txt {
+  position: absolute;
+  left: 5%;
+  bottom: 8%;
+  width: 60%;
+  padding: 30px;
+  background: #000;
+  opacity: 0.6;
+}
+.fdl-hdr-txt h1 {
+  font-size: 4em;
+  color: #fff;
+}
+.fdl-hdr-txt p {
+  font-size: 1.3em;
+  color: #fff;
+}
+/* END Pabellon */
+
+/* BEGIN Blocks */
+#fdl-block-main {
+  width: 100%;
+}
+.fdl-block {
+  width: 49.9%;
+  margin-top: 3px;
+  background: #73767a;
+  border: 1px solid #73767a;
+}
+.fdl-block:hover {
+  background: #22569d;
+  border: 1px solid #22569d;
+}
+.fdl-block-left {
+  float: left;
+}
+.fdl-block-right {
+  float: right;
+}
+.fdl-block-left-img {
+  width: 100%;
+  height: 350px;
+  background: url(/vpsite/wp-content/uploads/feria-del-libro-discurso.png)
+    center center;
+}
+.fdl-block-right-img {
+  width: 100%;
+  height: 350px;
+  background: url(/vpsite/wp-content/uploads/legado-de-duarte.png) center center;
+}
+.fdl-block-one-title {
+  font-size: 2.5em;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+/* END Blocks */
+
+/* BEGIN Image gallery */
+#fdl-galeria-de-fotos {
+  text-align: center;
+}
+.fdl-gallery-flickr {
+  width: 100%;
+  background: #73767a;
+  padding: 20px;
+}
+.fdl-gallery-flickr:hover {
+  background: #22569d;
+}
+/* END Image gallery */
+/* END Feria del Libro */
+
+/**/
+.page-id-19255 .yl-wrapper {
+  background-color: #ffffff38 !important;
+}
+.page-id-19255 .youmax {
+  background-color: #ffffff38 !important;
+}
+.page-id-19255 .yl-item {
+  background-color: #ffffff38 !important;
+}
+.page-id-19255 .yl-load-more-button {
+  background-color: #ffffff38 !important;
+}
+
+/*INICIO Estilos para página de agricultura familiar*/
+.elementor-social-icon-instagram {
+  background-color: #3b709a;
+}
+/*Estilos para formularios de Agricultura familiar*/
+.page-id-20431 h1,
+.page-id-20431 h2,
+.page-id-20431 h3,
+.page-id-20431 h4,
+.page-id-20431 h5 {
+  color: #298b22;
+}
+
+span.wpcf7-list-item {
+  display: block;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+span.wpcf7-list-item > label > input[type="checkbox"] {
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 3px;
+  margin-right: 1em;
+}
+
+/*Cambia el background de los formularios de Agri. Fam. dentro del modal*/
+#premium-modal-a66c18c
+  > div:nth-child(1)
+  > div:nth-child(1)
+  > div:nth-child(2) {
+  background-color: #c7e6f2;
+  background-image: url("https://vicepresidencia.gob.do/vpsite/wp-content/uploads/2018/08/cardboard.png");
+}
+#premium-modal-1b61990
+  > div:nth-child(1)
+  > div:nth-child(1)
+  > div:nth-child(2) {
+  background-color: #c7e6f2;
+  background-image: url("https://vicepresidencia.gob.do/vpsite/wp-content/uploads/2018/08/cardboard.png");
+}
+#premium-modal-dc40163
+  > div:nth-child(1)
+  > div:nth-child(1)
+  > div:nth-child(2) {
+  background-color: #c7e6f2;
+  background-image: url("https://vicepresidencia.gob.do/vpsite/wp-content/uploads/2018/08/cardboard.png");
+}
+/*Habilitando el scroll en los modales de agricultura Familiar*/
+.premium-modal-box-modal-body {
+  overflow-y: auto;
+  height: 500px;
+}
+@media only screen and (max-width: 600px) {
+  #premium-modal-a66c18c > div:nth-child(1) {
+    width: 90%;
+    height: 40%;
+    top: 21%;
+  }
+  #premium-modal-1b61990 > div:nth-child(1) {
+    width: 90%;
+    height: 40%;
+    top: 21%;
+  }
+  #premium-modal-dc40163 > div:nth-child(1) {
+    width: 90%;
+    height: 40%;
+    top: 21%;
+  }
+}
+.tcode-event-schedule .scheduled-event .event-title {
+  font-size: 1.3em !important;
+}
+.agriFam-link {
+  text-decoration: underline !important;
+  color: #298b22;
+}
+
+.agriFam-link:hover {
+  color: #e76114;
+}
+
+.elementor-price-table__heading {
+  text-align: center;
+}
+div.scheduled-events div.event-title {
+  font-weight: 500 !important;
+}
+
+.page-id-20431 h5 > em {
+  color: #298b22;
+}
+a.tcode-social-icon {
+  background-color: #ffffff !important;
+  color: #ec9c27 !important;
+}
+
+a.tcode-social-icon:hover {
+  background-color: #ec9c27 !important;
+  color: #ffffff !important;
+}
+/*FIN Estilos para página de agricultura familiar*/
+
+/*ESTILOS PARA PAGINA DE FORO ODS*/
+.page-id-21104 article.elementor-post.elementor-grid-item,
+.page-id-21109 article.elementor-post.elementor-grid-item {
+  width: 80%;
+}
+
+.page-id-21104 h2.elementor-heading-title,
+.page-id-21215 h2.elementor-heading-title,
+.page-id-21216 h2.elementor-heading-title,
+.page-id-21217 h2.elementor-heading-title,
+.page-id-21218 h2.elementor-heading-title,
+.page-id-21219 h2.elementor-heading-title,
+.page-id-21109 h2.elementor-heading-title,
+.page-id-21320 h2.elementor-heading-title,
+.page-id-21104 h1.elementor-heading-title,
+.page-id-21320 h1.elementor-heading-title,
+.page-id-21215 h1.elementor-heading-title,
+.page-id-21216 h1.elementor-heading-title,
+.page-id-21217 h1.elementor-heading-title,
+.page-id-21218 h1.elementor-heading-title,
+.page-id-21219 h1.elementor-heading-title,
+.page-id-21109 h1.elementor-heading-title {
+  color: #22569d;
+  font-family: "Ek Mukta", sans-serif;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+/*
+.page-id-21109 p.elementor-heading-title,
+.page-id-21104 p.elementor-heading-title{
+    text-align: center;
+}*/
+
+.page-id-21320 h3.elementor-post__title,
+.page-id-21320 h3.elementor-post__title a,
+.page-id-21104 h3.elementor-post__title,
+.page-id-21104 h3.elementor-post__title a,
+.page-id-21215 h3.elementor-post__title,
+.page-id-21215 h3.elementor-post__title a,
+.page-id-21216 h3.elementor-post__title,
+.page-id-21216 h3.elementor-post__title a,
+.page-id-21217 h3.elementor-post__title,
+.page-id-21217 h3.elementor-post__title a,
+.page-id-21218 h3.elementor-post__title,
+.page-id-21218 h3.elementor-post__title a,
+.page-id-21219 h3.elementor-post__title,
+.page-id-21219 h3.elementor-post__title a,
+.page-id-21109 h3.elementor-post__title,
+.page-id-21109 h3.elementor-post__title a {
+  color: #22569d !important;
+  font-family: "Merriweather Sans", Helvetica, Arial, sans-serif !important;
+  font-weight: 200 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.03em !important;
+  text-align: left !important;
+}
+#header-img-foro {
+  position: relative;
+  line-height: 1.6;
+  overflow: hidden;
+}
+#header-img-foro img {
+  opacity: 1;
+  position: relative;
+  z-index: 0;
+}
+#header-foro {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.breadcrumbs-foro {
+  font-size: 90%;
+  padding: 0.5em 0 0 0;
+  margin-bottom: 2.5em;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.4);
+}
+.breadcrumbs-foro > span:nth-of-type(1) {
+  width: 94%;
+  margin: 0 auto;
+  display: block;
+}
+.breadcrumbs-foro a {
+  color: #fff;
+}
+/*FIN DE ESTILOS PARA PAGINA DE FORO ODS*/
+
+/*ESTILOS BICIAMBULANCIA*/
+.elementor-page-24621 .eael-accordion-header {
+  text-align: left;
+}
+@media only screen and (max-width: 800px) {
+  .elementor-page-24621 p {
+    text-align: center;
+  }
+  .elementor-page-24621 #main-nav {
+    display: none;
+  }
+}
+/*FIN DE ESTILOS BICIAMBULANCIA*/
+
+/*INICIO ESTILOS VOCES CONTRA EL HAMBRE 2019*/
+.showcase-artista:hover p {
+  display: none;
+}
+
+.elementor-25770 .elementor-widget-heading .elementor-heading-title > a {
+  color: #d0a52b;
+  transition: color 1s;
+}
+
+.elementor-25770 .elementor-widget-heading .elementor-heading-title > a:hover {
+  color: #8f9638;
+}
+
+.elementor-25770 .youmax {
+  background: rgba(0, 0, 0, 0);
+}
+
+.elementor-25770 .youmax .yl-selected-tab::after,
+.elementor-25770 .youmax .yl-tab-container {
+  color: #8f9638;
+}
+
+.elementor-25770 .youmax .yl-tab-container .yl-tab {
+  font-family: "Kalam", Sans-serif;
+  font-size: 1.5em;
+}
+
+.elementor-25770
+  .elementor-element.elementor-element-ad27ff2
+  .eael-adv-accordion
+  .eael-accordion-list
+  .eael-accordion-header
+  span {
+  margin: 0 auto;
+}
+/*FIN ESTILOS VOCES CONTRA EL HAMBRE 2019*/
