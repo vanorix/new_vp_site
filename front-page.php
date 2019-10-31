@@ -6,7 +6,7 @@
 
 <?php get_template_part('./templates/module-vp') ?>
 
-<?php get_template_part('./templates/instagram-posts') ?>
+<?php get_template_part('./templates/twitter-posts') ?>
 
 <?php get_template_part('./templates/dominicana') ?>
 
