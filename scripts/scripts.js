@@ -50,7 +50,7 @@ $(document).ready(function() {
       $(e.target).addClass("hide");
       $("#hide").removeClass("hide");
       $("#hide").addClass("show");
-      $("#response").css("max-height", "2000px");
+      $("#response").css("max-height", "10000px");
     }
   });
   $("#hide").on("click", function(e) {
