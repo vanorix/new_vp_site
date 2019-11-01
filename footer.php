@@ -16,8 +16,8 @@
                             </p>
                         </div>
                         <div class="about-contact">
-                            <p><?php the_field('correo_eletronico'); ?></p>
-                            <p>Tel: <?php the_field('telefono'); ?></p>
+                            <p><a href="mailto:info@vicepresidencia.gob.do"><?php the_field('correo_eletronico'); ?></a></p>
+                            <p><a href="tel:+18096958000">Tel: <?php the_field('telefono'); ?> llama ahora</a></p>
                         </div>
                     </div>
                     
@@ -25,7 +25,7 @@
             endif; wp_reset_postdata(); ?>
             <div class="footer-menu">
                 <?php wp_nav_menu( array(
-                    'menu'  => 'menu-footer'
+                    'menu'  => 'footer_menu'
                 ) ); ?>
             </div>
             <?php $loop = new WP_Query( 

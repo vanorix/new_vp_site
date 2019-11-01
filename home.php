@@ -19,7 +19,7 @@
                                 <h2><?php the_title(); ?></h2>
                             </div>
                             <div class="post-date">
-                                <?php the_date(); ?>
+                                <?php echo get_the_date(); ?>
                             </div>
                         </div>
                     </a>

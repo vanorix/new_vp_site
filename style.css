@@ -231,7 +231,7 @@ pre {
 }
 
 .main-menu ul li a:hover {
-  background-color: rgb(255, 217, 0);
+  background-color: #e3172c;
 }
 
 .main-menu ul li > ul {
@@ -831,6 +831,12 @@ footer .footer-menu {
   }
 }
 
+.menu-footer-menu-container ul {
+  columns: 2;
+  width: 300px;
+  column-gap: 170px;
+}
+
 footer .footer-menu li {
   list-style: none;
 }
@@ -923,6 +929,16 @@ footer .footer-copy {
 #ctf .ctf-header {
   display: flex;
   justify-content: center;
+}
+
+.ctf-tweets {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#ctf .ctf-item {
+  width: calc((100% / 3) - 15px);
 }
 
 /**************************
