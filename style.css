@@ -904,6 +904,15 @@ footer .footer-copy {
   }
 }
 
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: rgb(255, 217, 0);
+}
+
 /**************************
     POSTS TWITTER
 **************************/
