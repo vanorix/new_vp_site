@@ -47,12 +47,12 @@
             <i class="fas fa-times"></i>
         </div>
         <?php wp_nav_menu( array(
-            'menu'  => 'main-menu'
+            'menu'  => 'main_menu'
         )); ?>
     </nav>
     <!-- MAIN MENU -->
     <nav class="main-menu">
         <?php wp_nav_menu( array(
-            'menu'  => 'main-menu'
+            'menu'  => 'main_menu'
         )); ?>
     </nav>
