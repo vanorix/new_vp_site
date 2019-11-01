@@ -119,30 +119,32 @@ function photospace_shortcode( $atts ) {
 	<script>";
 			
 			$output_buffer .= "
-			var slider = $('#slider_".$post_id." .slider').bxSlider({
-				pagerCustom: '#slidernav_".$post_id." ul',
-				mode: 'fade',
-				captions: true,
-				video: true,
-				responsive: true,
-				nextSelector: '#slider_".$post_id." .slider-next',
-				prevSelector: '#slider_".$post_id." .slider-prev',
-				nextText: '<i class=".'"fa fa-angle-right fa-2x"'."></i>',
-				prevText: '<i class=".'"fa fa-angle-left fa-2x"'."></i>'
-			});
-			var slidernav = $('#slidernav_".$post_id." ul').bxSlider({
-				slideWidth: 115,
-				minSlides: 7,
-				maxSlides: 7,
-				moveSlides: 7,
-				infiniteLoop: false,
-				pager: false,
-				nextSelector: '#slidernav_".$post_id." .slider-int-sub-next',
-				prevSelector: '#slidernav_".$post_id." .slider-int-sub-prev',
-				nextText: '<i class=".'"fa fa-angle-right fa-lg"'."></i>',
-				prevText: '<i class=".'"fa fa-angle-left fa-lg"'."></i>',
-				slideMargin: 8
-			});
+			window.onload = function() {
+				var slider = jQuery('#slider_".$post_id." .slider').bxSlider({
+					pagerCustom: '#slidernav_".$post_id." ul',
+					mode: 'fade',
+					captions: true,
+					//video: true,
+					responsive: true,
+					nextSelector: '#slider_".$post_id." .slider-next',
+					prevSelector: '#slider_".$post_id." .slider-prev',
+					nextText: '<i class=".'"fa fa-angle-right fa-2x"'."></i>',
+					prevText: '<i class=".'"fa fa-angle-left fa-2x"'."></i>'
+				});
+				var slidernav = jQuery('#slidernav_".$post_id." ul').bxSlider({
+					slideWidth: 115,
+					minSlides: 7,
+					maxSlides: 7,
+					moveSlides: 7,
+					infiniteLoop: false,
+					pager: false,
+					nextSelector: '#slidernav_".$post_id." .slider-int-sub-next',
+					prevSelector: '#slidernav_".$post_id." .slider-int-sub-prev',
+					nextText: '<i class=".'"fa fa-angle-right fa-lg"'."></i>',
+					prevText: '<i class=".'"fa fa-angle-left fa-lg"'."></i>',
+					slideMargin: 8
+				});
+			};
 			";
 			
 		$output_buffer .= "
@@ -150,3 +152,5 @@ function photospace_shortcode( $atts ) {
 		
 		return $output_buffer;
 }
+
+?>
