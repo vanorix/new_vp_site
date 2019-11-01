@@ -4,9 +4,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/superslides.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
     <title><?php bloginfo('name'); ?> <?php bloginfo('description'); ?></title>
     <?php wp_head(); ?>
 </head>

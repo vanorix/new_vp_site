@@ -337,6 +337,6 @@
 }
 
 .slider-int {
-  margin: 0.8em 0 2em 0;
-  width: 100%;
+  margin: 0.8em auto 2em auto;
+  width: 70%;
 }
