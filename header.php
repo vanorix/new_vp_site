@@ -32,11 +32,10 @@
                     <input type="text" placeholder="¿Que buscar?">
                 </div>
                 <div class="header-menu">
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Contacto</a></li>
-                        <li><a href="#">Mapa del Sitio</a></li>
-                    </ul>
+                    <?php wp_nav_menu( array(
+                        'theme_location'  => 'privacy_menu',
+                        'container'         => false
+                    )); ?>
                 </div>
             </div>
         </div>
