@@ -899,7 +899,7 @@ footer .footer-copy {
 }
 
 /**************************
-    PRENSA
+    POSTS TWITTER
 **************************/
 .twitts-section {
   width: 100%;
@@ -911,6 +911,11 @@ footer .footer-copy {
 .twitts-section .twitts-container {
   width: 100%;
   max-width: 1180px;
+}
+
+#ctf .ctf-header {
+  display: flex;
+  justify-content: center;
 }
 
 /**************************
