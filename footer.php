@@ -27,7 +27,8 @@
             endif; wp_reset_postdata(); ?>
             <div class="footer-menu">
                 <?php wp_nav_menu( array(
-                    'theme_location'  => 'footer_menu'
+                    'theme_location'    => 'footer_menu',
+                    'container'         => false
                 ) ); ?>
             </div>
             <div class="footer-form">

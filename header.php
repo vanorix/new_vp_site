@@ -48,11 +48,13 @@
         </div>
         <?php wp_nav_menu( array(
             'theme_location'  => 'main_menu'
+            'container'         => false
         )); ?>
     </nav>
     <!-- MAIN MENU -->
     <nav class="main-menu">
         <?php wp_nav_menu( array(
             'theme_location'  => 'main_menu'
+            'container'         => false
         )); ?>
     </nav>
