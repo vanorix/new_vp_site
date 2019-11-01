@@ -60,8 +60,8 @@ header .container {
 
 header .header-logo {
   width: 70%;
+  height: 120px;
   text-align: center;
-  height: 90px;
   border-bottom: solid 0.5px #ccc;
 }
 
@@ -120,6 +120,7 @@ header .header-right .search input {
 }
 
 .header-menu {
+  font-size: 12px;
   padding-top: 10px;
 }
 
