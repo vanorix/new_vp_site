@@ -11,8 +11,11 @@
                 <div class="home-post">
                     <a href="<?php the_permalink(); ?>">
                         <div class="post-thumbnail">
-                        <?php $thumbnail = get_the_post_thumbnail_url(); ?>
+                        <?php if ( has_post_thumbnail() ) { $thumbnail = get_the_post_thumbnail_url(); ?>
                             <img src="<?php echo $thumbnail; ?>" alt="">
+                        <?php } else { ?>
+                            <img src="<?php bloginfo("template_url"); ?>/img/no-disponible.jpg" alt="">
+                        <?php } ?>
                         </div>
                         <div class="entry-summary">
                             <div class="post-title">
