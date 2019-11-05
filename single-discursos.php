@@ -43,32 +43,32 @@
         </div>
       
         <script>
-        $(function(){
-          $('#slider_<?php the_ID(); ?> .slider').bxSlider({
-            pagerCustom: '#slidernav_<?php the_ID(); ?> ul',
-          	mode: 'fade',
-            captions: true,
-            video: true,
-            responsive: true,
-            nextSelector: '#slider_<?php the_ID(); ?> .slider-next',
-            prevSelector: '#slider_<?php the_ID(); ?> .slider-prev',
-            nextText: '<i class="fa fa-angle-right"></i>',
-            prevText: '<i class="fa fa-angle-left"></i>'
-          });
-          $('#slidernav_<?php the_ID(); ?> ul').bxSlider({
-            slideWidth: 115,
-            minSlides: 7,
-            maxSlides: 7,
-            moveSlides: 7,
-            infiniteLoop: false,
-            pager: false,
-            nextSelector: '#slidernav_<?php the_ID(); ?> .slider-int-sub-next',
-            prevSelector: '#slidernav_<?php the_ID(); ?> .slider-int-sub-prev',
-            nextText: '<i class="fa fa-angle-right fa-2x"></i>',
-            prevText: '<i class="fa fa-angle-left fa-2x"></i>',
-            slideMargin: 8
-          });
-        });
+        window.onload = function() {
+            jQuery('#slider_<?php the_ID(); ?> .slider').bxSlider({
+                pagerCustom: '#slidernav_<?php the_ID(); ?> ul',
+                mode: 'fade',
+                captions: true,
+                video: true,
+                responsive: true,
+                nextSelector: '#slider_<?php the_ID(); ?> .slider-next',
+                prevSelector: '#slider_<?php the_ID(); ?> .slider-prev',
+                nextText: '<i class="fa fa-angle-right"></i>',
+                prevText: '<i class="fa fa-angle-left"></i>'
+            });
+            jQuery('#slidernav_<?php the_ID(); ?> ul').bxSlider({
+                slideWidth: 115,
+                minSlides: 7,
+                maxSlides: 7,
+                moveSlides: 7,
+                infiniteLoop: false,
+                pager: false,
+                nextSelector: '#slidernav_<?php the_ID(); ?> .slider-int-sub-next',
+                prevSelector: '#slidernav_<?php the_ID(); ?> .slider-int-sub-prev',
+                nextText: '<i class="fa fa-angle-right fa-2x"></i>',
+                prevText: '<i class="fa fa-angle-left fa-2x"></i>',
+                slideMargin: 8
+            });
+        };
         </script>
         
         <?php } else { ?>
