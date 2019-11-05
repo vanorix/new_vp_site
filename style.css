@@ -922,6 +922,32 @@ footer a:hover {
 }
 
 /**************************
+    POSTS INSTAGRAM
+**************************/
+.instagram-posts {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instagram-posts-container {
+  width: 80%;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.instagram-title {
+  width: 100%;
+  text-align: center;
+  color: #226bb1;
+  padding-bottom: 30px;
+}
+
+
+/**************************
     POSTS TWITTER
 **************************/
 .twitts-section {
