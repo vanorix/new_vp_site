@@ -5,7 +5,7 @@
         <img src="<?php echo $article['url']; ?>" alt="">
     </div>
     <?php $fondoFrase = get_field('fondo_frase'); ?>
-    <div class="instagram-posts" style="background-image: url(<?php echo $fondoFrase['url']; ?>)">
+    <div class="instagram-posts">
         <div class="instagram-posts-container">
             <div class="instagram-title">
                 <h2>Posts Instagram</h2>
