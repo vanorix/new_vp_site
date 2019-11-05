@@ -5,17 +5,13 @@
         <img src="<?php echo $article['url']; ?>" alt="">
     </div>
     <?php $fondoFrase = get_field('fondo_frase'); ?>
-    <div class="frasevp" style="background-image: url(<?php echo $fondoFrase['url']; ?>)">
-        <div class="frase-container">
-            <div class="section-title">
-                <h1>Frase</h1>
-                <span>de la doctora</span>
+    <div class="instagram-posts" style="background-image: url(<?php echo $fondoFrase['url']; ?>)">
+        <div class="instagram-posts-container">
+            <div class="instagram-title">
+                <h2>Posts Instagram</h2>
             </div>
-            <div class="frase-text">
-                <p><?php the_field('frase'); ?></p>
-            </div>
-            <div class="frase-name">
-                <?php the_field('nombre_autora'); ?>
+            <div class="posts-instagram">
+                <?php echo do_shortcode('[instagram-feed]'); ?>
             </div>
         </div>
     </div>
