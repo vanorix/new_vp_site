@@ -11,7 +11,6 @@
                 <h2>Posts Instagram</h2>
             </div>
             <div class="posts-instagram">
-                <?php echo do_shortcode('[instagram-feed]'); ?>
             </div>
         </div>
     </div>
