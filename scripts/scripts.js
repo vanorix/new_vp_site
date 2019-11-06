@@ -1,4 +1,4 @@
-$(document).ready(function() {
+(function($) {
   $("#slides").superslides({
     play: 5000,
     pagination: true
@@ -62,5 +62,4 @@ $(document).ready(function() {
       $("#response").css("max-height", "250px");
     }
   });
-  //************* Funciones para enlaces en footer
-});
+})(jQuery);
