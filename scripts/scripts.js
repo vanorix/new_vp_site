@@ -1,4 +1,4 @@
-(function ($) { 
+jQuery(document).ready(function () { 
 
   $("#slides").superslides({
     play: 5000,
@@ -64,4 +64,4 @@
     }
   });
 
-})(jQuery);
+});
