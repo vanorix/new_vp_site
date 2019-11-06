@@ -6,16 +6,19 @@
 function theme_vpsite_style_scripts() {
     wp_enqueue_style( 'style-vpsite', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.0', false );
     wp_enqueue_style( 'superslidescss', get_template_directory_uri() . '/css/superslides.css' );
-	wp_enqueue_style( 'enlacescss', get_template_directory_uri() . '/css/enlaces.css' );
-	wp_enqueue_script( 'jquery-2', 'https://code.jquery.com/jquery-2.1.4.min.js', array(), '3.1.1', true );
-	wp_enqueue_script( 'superslides', get_template_directory_uri() . '/scripts/jquery.superslides.js', array(), '1.0.0', true );
-	wp_enqueue_script( 'script-vpsite', get_template_directory_uri() . '/scripts/scripts.js', array(), '1.0.0', true );
-	if(!is_front_page()) {
-		wp_enqueue_script( 'FitVids', 'https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js', array(), '1.0.0', true );		
-		wp_enqueue_script( 'bxsliderjs', get_template_directory_uri() . '/scripts/bxslider.js', array(), '1.0.0', true );
-		wp_enqueue_style( 'bxslidercss', get_template_directory_uri() . '/css/bxslider.css' );
-		wp_enqueue_style( 'legacyStyles', get_template_directory_uri() . '/css/legacy.css' );	}
-}
+    wp_enqueue_style( 'enlacescss', get_template_directory_uri() . '/css/enlaces.css' );
+	  wp_enqueue_script( 'script-vpsite', get_template_directory_uri() . '/scripts/scripts.js', array(), '1.0.0', true );
+	  wp_enqueue_script( 'jquery-2', 'https://code.jquery.com/jquery-2.1.4.min.js', array(), '3.1.1', true );
+	  wp_enqueue_script( 'superslides', get_template_directory_uri() . '/scripts/jquery.superslides.js', array(), '1.0.0', true );
+    if (is_front_page()) {
+      wp_enqueue_script( 'instagram-posts', get_template_directory_uri() . '/scripts/instagram_posts.js', array(), '1.0.0', true );
+    }
+    if(!is_front_page()) {
+      wp_enqueue_script( 'FitVids', 'https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js', array(), '1.0.0', true );		
+      wp_enqueue_script( 'bxsliderjs', get_template_directory_uri() . '/scripts/bxslider.js', array(), '1.0.0', true );
+      wp_enqueue_style( 'bxslidercss', get_template_directory_uri() . '/css/bxslider.css' );
+      wp_enqueue_style( 'legacyStyles', get_template_directory_uri() . '/css/legacy.css' );	}
+    }
 add_action( 'wp_enqueue_scripts', 'theme_vpsite_style_scripts' );
 
 /**************************************
@@ -347,7 +350,6 @@ function seiel_pagination(){
 	));
 }
 
-
 /**************************************
 	GALLERY SHORTCODE
 	Agrega una version modificada del shortcode de la galeria de imagenes
@@ -360,3 +362,4 @@ function add_gallery_shortcode() {
 	add_image_size('medium', 960, 540, true); // Medium Thumbnail
 	require_once('library/gallery-shortcode.php');
 }
+
