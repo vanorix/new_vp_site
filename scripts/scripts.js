@@ -1,4 +1,5 @@
-(function($) {
+(function ($) { 
+
   $("#slides").superslides({
     play: 5000,
     pagination: true
@@ -62,4 +63,5 @@
       $("#response").css("max-height", "250px");
     }
   });
+
 })(jQuery);
