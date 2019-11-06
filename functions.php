@@ -10,6 +10,7 @@ function theme_vpsite_style_scripts() {
 	/*wp_enqueue_script( 'jquery-2', 'https://code.jquery.com/jquery-2.1.4.min.js', array(), '3.1.1', true );*/
 	wp_enqueue_script( 'script-vpsite', get_template_directory_uri() . '/scripts/scripts.js', array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'superslides', get_template_directory_uri() . '/scripts/jquery.superslides.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'instagram-posts', get_template_directory_uri() . '/scripts/instagram_posts.js', array(), '1.0.0', true );
 	
 	if(!is_front_page()) {
 		wp_enqueue_script( 'FitVids', 'https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js', array('jquery'), '1.0.0', true );		
@@ -18,9 +19,6 @@ function theme_vpsite_style_scripts() {
 		wp_enqueue_style( 'legacyStyles', get_template_directory_uri() . '/css/legacy.css' );	}
 	}
 	
-	if (is_front_page()) {
-		wp_enqueue_script( 'instagram-posts', get_template_directory_uri() . '/scripts/instagram_posts.js', array(), '1.0.0', true );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'theme_vpsite_style_scripts' );
 
