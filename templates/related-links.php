@@ -2,7 +2,7 @@
     <div class="titulo-enlaces">
         <h2>Instituciones</h2>
         <div id="selectorenelcentro">
-            <select id="changeLinks" class="selector">
+            <select id="changeLinks" class="selector-enlaces">
                 <option value="ministerios">Ministerios </option>
                 <option value="direcciones-generales">Direcciones Generales </option>
                 <option value="institutos">Institutos </option>
@@ -21,8 +21,8 @@
         </div>
     </div>
     <div class="panel-wrapper">
-        <button class="show btn" id="show">Mostrar m&aacute;s instituciones</button> 
-        <button class="hide btn" id="hide">Mostrar menos instituciones</button> 
+        <button class="show btn-enlaces" id="show">Mostrar m&aacute;s instituciones</button> 
+        <button class="hide btn-enlaces" id="hide">Mostrar menos instituciones</button> 
         <div id="response" class="panel">
         </div>
         <div class="fade"></div>

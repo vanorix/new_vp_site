@@ -1,131 +1,133 @@
 .enlaces {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	background-color:#F0F0F0;
-	overflow:hidden;
-	clear: both; 
-	text-align: left;
-	padding-top: 50px;
-	padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  clear: both;
+  text-align: left;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .enlaces .container {
-	background: transparent;
+  background: transparent;
 }
 .enlaces .moduletable {
-	 width:100%;
+  width: 100%;
 }
 .enlaces img {
-	 display:block;
-	 text-align:center;
+  display: block;
+  text-align: center;
 }
 .main-enlaces {
-	margin:0 auto 0 auto;
-	width:600px
+  margin: 0 auto 0 auto;
+  width: 600px;
 }
 .titulo-enlaces {
-	display: flex;
-	flex-flow: row nowrap;
-	width: 80%;
-	justify-content: flex-start;
-	margin-left:auto;
-	margin-right:auto;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 80%;
+  justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
 }
 .titulo-enlaces * {
-	flex-basis: 30%;
-	padding: 0 15px;
+  flex-basis: 30%;
+  padding: 0 15px;
 }
 
 .titulo-enlaces h2 {
-	flex-basis: 10%;
+  flex-basis: 10%;
 }
 
 #response {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-	width: 80%;
-	background-color:#F0F0F0;
-	font-size:10pt !important;
-	color:#595959;
-	font-family:lato,sans-serif;
-	margin-left:auto;
-	margin-right:auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 80%;
+  background-color: #f0f0f0;
+  font-size: 10pt !important;
+  color: #595959;
+  font-family: lato, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #response div {
-	flex: 1 20%;
+  flex: 1 20%;
 }
 
 #response a {
-	color:#595959;
-	font-weight:700;
-	text-decoration:none;
+  color: #595959;
+  font-weight: 700;
+  text-decoration: none;
 }
 #response span {
-	font-size: 16px;
-	font-weight: 500;
+  font-size: 16px;
+  font-weight: 500;
 }
-.selector {
-	background-color:#fff;
-	color:#595959;
-	width: 80%;
-	font-size:18px;
-	font-family:lato,sans-serif;
-	border: solid #aa9e89 2px;
+.selector-enlaces {
+  background-color: #fff;
+  color: #595959;
+  width: 100%;
+  font-size: 18px;
+  font-family: lato, sans-serif;
+  border: solid #aa9e89 2px;
 }
 #selectorenelcentro {
-	padding-bottom:22px;
-	text-align:left;
+  padding-bottom: 22px;
+  text-align: left;
+  margin-left: 25%;
 }
 
 label {
-	font-family:lato,sans-serif;
-	font-size:18px;
-	font-style:italic;
-	font-weight:700;
-	margin-top:2px;
-	margin-right:12px;
-	color:#595959;
+  font-family: lato, sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  margin-top: 2px;
+  margin-right: 12px;
+  color: #595959;
 }
 .fondos {
-	 background-color:red;
+  background-color: red;
 }
 #espacio {
-	padding-bottom:150px;
-	text-indent:-9999px;
+  padding-bottom: 150px;
+  text-indent: -9999px;
 }
 .enlaces_a {
-	background-color:#b33d3d;
-	height:780px;
+  background-color: #b33d3d;
+  height: 780px;
 }
 
 /***********Mostrar mas*/
 .panel-wrapper {
-	position: relative;
+  position: relative;
 }
 
-.btn {
-	color: #fff;
-	background: #226bb1;
-	border-radius: 1.5em;
-	left: 40%;
-	padding: 1em;
-	text-decoration: none;
-	width: 20%;
-	font-size: 1em;
+.btn-enlaces {
+  color: #fff;
+  background: #226bb1;
+  border-radius: 1.5em;
+  left: 40%;
+  padding: 1em;
+  text-decoration: none;
+  width: 20%;
+  font-size: 1em;
 }
 
-.btn:hover {
-	color: #226bb1;
-	background: #ffd900;
+.btn-enlaces:hover {
+  color: #226bb1;
+  background: #ffd900;
 }
 
-.show, .hide {
-	position: absolute;
-	bottom: -1em;
-	z-index: 100;
-	text-align: center;
+.show,
+.hide {
+  position: absolute;
+  bottom: -1em;
+  z-index: 100;
+  text-align: center;
 }
 
 /*.hide {display: none;}
@@ -138,36 +140,59 @@ label {
   margin-top: 0;
 }*/
 
-.hide {display: none;}
-.show {display: block;}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
 .panel-show {
-	max-height: 2000px; 
+  max-height: 2000px;
 }
 
 .panel {
-	position: relative;
-	margin: 2em auto;
-	width: 70%;
-	max-height: 250px;
-	overflow: hidden;
-	transition: max-height .5s ease;
+  position: relative;
+  margin: 2em auto;
+  width: 70%;
+  max-height: 250px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 .fade {
-	background: linear-gradient(to bottom, rgba($bg-color,0) 0%,rgba($bg-color,1) 75%);
-	height: 100px;
-	margin-top: -100px;
-	position: relative;
+  background: linear-gradient(
+    to bottom,
+    rgba($bg-color, 0) 0%,
+    rgba($bg-color, 1) 75%
+  );
+  height: 100px;
+  margin-top: -100px;
+  position: relative;
 }
 /***********Mostrar mas*/
 
-@media only screen and (max-width: 600px){
-	.main-enlaces, #selectorenelcentro {
-		width: 90%;
-	}
-	#response div {
-		flex-basis: 100%;
-	}
+@media only screen and (max-width: 600px) {
+  .main-enlaces,
+  #selectorenelcentro {
+    width: 90%;
+  }
+  #response div {
+    flex-basis: 100%;
+  }
+  .titulo-enlaces {
+    flex-flow: row wrap;
+  }
+  #selectorenelcentro {
+    width: 100%;
+    margin-left: 0;
+    flex-basis: 100%;
+  }
+  .btn-enlaces {
+    left: 24%;
+    width: 50%;
+  }
+  .selector-enlaces {
+    width: 100%;
+  }
 }
-@media only screen and (min-width: 601px) and (max-width: 800px){
-
+@media only screen and (min-width: 601px) and (max-width: 800px) {
 }

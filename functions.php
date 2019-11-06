@@ -4,15 +4,21 @@
     ESTILOS Y SCRIPTS
 **************************************/
 function theme_vpsite_style_scripts() {
-    wp_enqueue_style( 'style-vpsite', get_stylesheet_directory_uri(), array(), '1.0.0', false );
+    wp_enqueue_style( 'style-vpsite', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.0', false );
     wp_enqueue_style( 'superslidescss', get_template_directory_uri() . '/css/superslides.css' );
     wp_enqueue_style( 'enlacescss', get_template_directory_uri() . '/css/enlaces.css' );
-	wp_enqueue_script( 'script-vpsite', get_template_directory_uri() . '/scripts/scripts.js', array(), '1.0.0', true );
-	
-	if (is_front_page()) {
-		wp_enqueue_script( 'instagram-posts', get_template_directory_uri() . '/scripts/instagram_posts.js', array(), '1.0.0', true );
-	}
-}
+	  wp_enqueue_script( 'script-vpsite', get_template_directory_uri() . '/scripts/scripts.js', array(), '1.0.0', true );
+	  wp_enqueue_script( 'jquery-2', 'https://code.jquery.com/jquery-2.1.4.min.js', array(), '3.1.1', true );
+	  wp_enqueue_script( 'superslides', get_template_directory_uri() . '/scripts/jquery.superslides.js', array(), '1.0.0', true );
+    if (is_front_page()) {
+      wp_enqueue_script( 'instagram-posts', get_template_directory_uri() . '/scripts/instagram_posts.js', array(), '1.0.0', true );
+    }
+    if(!is_front_page()) {
+      wp_enqueue_script( 'FitVids', 'https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js', array(), '1.0.0', true );		
+      wp_enqueue_script( 'bxsliderjs', get_template_directory_uri() . '/scripts/bxslider.js', array(), '1.0.0', true );
+      wp_enqueue_style( 'bxslidercss', get_template_directory_uri() . '/css/bxslider.css' );
+      wp_enqueue_style( 'legacyStyles', get_template_directory_uri() . '/css/legacy.css' );	}
+    }
 add_action( 'wp_enqueue_scripts', 'theme_vpsite_style_scripts' );
 
 /**************************************
@@ -45,8 +51,6 @@ function themename_custom_logo_setup() {
 	add_theme_support( 'custom-logo', $defaults );
 }
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
-
-add_image_size('mini', 320, 180, true); // Mini Thumbnail
 
 /**************************************
     POST TYPE SLIDER
@@ -298,10 +302,10 @@ add_action( 'init', 'codex_articulo_init' );
  */
 function codex_articulo_init() {
 	$labels = array(
-		'name'               => _x( 'Articulos', 'post type general name', 'vpsite' ),
-		'singular_name'      => _x( 'Articulo', 'post type singular name', 'vpsite' ),
-		'menu_name'          => _x( 'Articulos', 'admin menu', 'vpsite' ),
-		'name_admin_bar'     => _x( 'Articulo', 'add new on admin bar', 'vpsite' ),
+		'name'               => _x( 'Art&iacute;culos', 'post type general name', 'vpsite' ),
+		'singular_name'      => _x( 'Art&iacute;culo', 'post type singular name', 'vpsite' ),
+		'menu_name'          => _x( 'Art&iacute;culos', 'admin menu', 'vpsite' ),
+		'name_admin_bar'     => _x( 'Art&iacute;culo', 'add new on admin bar', 'vpsite' ),
 		'add_new'            => _x( 'Add new', 'Articulo', 'vpsite' ),
 		'add_new_item'       => __( 'Add new Articulo', 'vpsite' ),
 		'new_item'           => __( 'New Articulos', 'vpsite' ),
@@ -345,3 +349,17 @@ function seiel_pagination(){
 		'total' => $wp_query->max_num_pages
 	));
 }
+
+/**************************************
+	GALLERY SHORTCODE
+	Agrega una version modificada del shortcode de la galeria de imagenes
+	para que funcione como un slider. Utiliza bxslider.js
+**************************************/
+add_action('after_setup_theme', 'add_gallery_shortcode');
+function add_gallery_shortcode() {
+	add_image_size('mini', 320, 180, true); // Mini Thumbnail
+	add_image_size('gal_thumb', 120, 68, true); // Slider Thumbs
+	add_image_size('medium', 960, 540, true); // Medium Thumbnail
+	require_once('library/gallery-shortcode.php');
+}
+
