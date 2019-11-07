@@ -821,19 +821,19 @@ main.eventos {
 
 .speaker .speaker_col {
   width: 100%;
-  height: 400px;
+  height: 750px;
 }
 
 @media (min-width: 1080px) {
   .speaker .speaker_col {
       width: 50%;
-      height: 400px;
+      height: 750px;
   }   
 }
 
 .speaker_image {
   width: 100%;
-  height: 400px;
+  height: 750px;
   background-image: url(http://localhost/vpsite/wp-content/uploads/2019/10/Evento-Premio-Madres-de-Valor.png);
   background-size: cover;
   background-repeat: no-repeat;
