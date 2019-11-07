@@ -848,6 +848,10 @@ main.eventos {
   justify-content: flex-end;
 }
 
+.speaker_content:nth-child(even) {
+  justify-content: flex-start;
+}
+
 .speaker-text {
   width: calc(100% - 80px);
   display: flex;
