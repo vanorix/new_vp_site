@@ -8,8 +8,9 @@ function theme_vpsite_style_scripts() {
     wp_enqueue_style( 'superslidescss', get_template_directory_uri() . '/css/superslides.css' );
     wp_enqueue_style( 'enlacescss', get_template_directory_uri() . '/css/enlaces.css' );
 	/*wp_enqueue_script( 'jquery-2', 'https://code.jquery.com/jquery-2.1.4.min.js', array(), '3.1.1', true );*/
-	wp_enqueue_script( 'script-vpsite', get_template_directory_uri() . '/scripts/scripts.js', array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'superslides', get_template_directory_uri() . '/scripts/jquery.superslides.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'instafeed', get_template_directory_uri() . '/scripts/instafeed.min.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'script-vpsite', get_template_directory_uri() . '/scripts/scripts.js', array('jquery'), '1.0.0', true );
 	
 	if(is_front_page()) {
 		wp_enqueue_script( 'instagram-posts', get_template_directory_uri() . '/scripts/instagram_posts.js', array('Jquery'), '1.0.0', true );
@@ -366,4 +367,3 @@ function add_gallery_shortcode() {
 	add_image_size('medium', 960, 540, true); // Medium Thumbnail
 	require_once('library/gallery-shortcode.php');
 }
-

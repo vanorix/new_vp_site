@@ -9,8 +9,9 @@
         <div class="instagram-posts-container">
             <div class="instagram-title">
                 <h2>Posts Instagram</h2>
+                <a href="https://www.instagram.com/vicerdo/">@Vicerdo</a>
             </div>
-            <div class="posts-instagram">
+            <div id="instafeed">
             </div>
         </div>
     </div>

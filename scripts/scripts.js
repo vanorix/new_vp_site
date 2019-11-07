@@ -64,4 +64,15 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  var userFeed = new Instafeed({
+    get:'user',
+    userId: '294403897',
+    limit: 6,
+    resolution: 'standard_resolution',
+    accessToken: '294403897.1677ed0.b164b4dbf32d4934bb29c808a254363c',
+    sortBy: 'most-recent',
+    template: '<div class="post-instagram"><a href="{{link}}" title="{{caption}}" target="{{_blank}}"><img src="{{image}}" alt="{{caption}}" /></a></div>'
+  });
+  userFeed.run();
+
 });

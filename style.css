@@ -464,7 +464,6 @@ pre {
 **************************/
 .modulevp {
   width: 100%;
-  height: 80vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -534,15 +533,21 @@ pre {
     POSTS INSTAGRAM
 **************************/
 .instagram-posts {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f5f5f5;
 }
 
+@media (min-width: 1080px) {
+  .instagram-posts {
+    width: 50%;
+  }
+}
+
 .instagram-posts-container {
-  width: 85%;
+  width: 95%;
   display: flex;
   flex-wrap: wrap;
   padding-top: 30px;
@@ -558,6 +563,33 @@ pre {
 #sb_instagram {
   height: auto !important;
 }
+
+div#instafeed {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#instafeed .post-instagram {
+  width: calc((100% / 2) - 5px);
+  height: 230px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1080px) {
+  #instafeed .post-instagram {
+    width: calc((100% / 3) - 5px);
+  }
+}
+
+.post-instagram a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /**************************
     POSTS TWITTER
