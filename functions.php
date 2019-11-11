@@ -342,6 +342,62 @@ function codex_articulo_init() {
 	register_post_type( 'articulo', $args );
 }
 
+/**************************************
+    POST TYPE MULTIMEDIA
+**************************************/
+add_action('init', 'create_ct_multimedia'); // Custom Categories para Multimedia
+add_action('init', 'create_cpt_multimedia'); // Multimedia
+// CATEGORIAS MULTIMEDIA
+function create_ct_multimedia() {
+	$labels = array(
+		'name'              => _x( 'Categorías de Fotos', 'taxonomy general name' , 'seielwp' ),
+		'singular_name'     => _x( 'Categoría', 'taxonomy singular name' , 'seielwp' ),
+		'menu_name'         => __( 'Categorías' , 'seiel' ),
+		'new_item_name'     => __( 'Nueva Categoría' , 'seiel' )
+	);
+	$args = array(
+		'labels' 						=> $labels,
+		'show_in_nav_menus' => false,
+		'show_admin_column' => true,
+		'hierarchical' 			=> true,
+		'rewrite' 					=> array( 'slug' => 'multimedia/galeria', 'with_front' => false ),
+	);
+	register_taxonomy('multimedia-cat', 'multimedia', $args);
+}
+
+// MULTIMEDIA
+function create_cpt_multimedia(){
+	$labels = array(
+		'name' 								=> __('Fotos', 'seiel'),
+		'singular_name' 			=> __('Foto', 'seiel'),
+		'menu_name' 					=> __('Galería de Fotos', 'seiel'),
+		'add_new' 						=> __('Agregar Nueva', 'seiel'),
+		'add_new_item' 				=> __('Agregar Nueva Foto', 'seiel'),
+		'edit' 								=> __('Editar', 'seiel'),
+		'edit_item' 					=> __('Editar Foto', 'seiel'),
+		'new_item' 						=> __('Nueva Foto', 'seiel'),
+		'view' 								=> __('Ver', 'seiel'),
+		'view_item' 					=> __('Ver Foto', 'seiel'),
+		'all_items' 					=> __('Todas', 'seiel'),
+		'search_items' 				=> __('Buscar', 'seiel'),
+		'not_found' 					=> __('No se encontraron fotos', 'seiel'),
+		'not_found_in_trash' 	=> __('No se encontraron fotos en la papelera', 'seiel')
+	);
+	$args = array(
+		'labels' 							=> $labels,
+		'public' 							=> true,
+		'show_in_nav_menus' 	=> true,
+		'menu_position' 			=> 6,
+		'menu_icon' 					=> 'dashicons-format-gallery',
+		'supports' 						=> array( 'title', 'author' ),
+		'has_archive' 				=> false,
+		'rewrite' 						=> array( 'slug' => 'multimedia/galerias' , 'with_front' => false ),
+		'can_export' 					=> true
+	);
+	register_post_type('multimedia', $args);
+	register_taxonomy_for_object_type('post_tag', 'multimedia');
+}
+
 // Pagination for paged posts
 function seiel_pagination(){
 	global $wp_query;
