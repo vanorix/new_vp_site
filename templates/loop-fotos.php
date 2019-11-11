@@ -3,7 +3,7 @@
         <div class="post-thumbnail">
         <?php if(get_field('imagen')) { 
             $attachment_id = get_field('imagen');
-            $size = "thumbnail";
+            $size = "medium";
             $image = wp_get_attachment_image_src( $attachment_id, $size ); ?>
             <img src="<?php echo $image[0]; ?>" alt="" />
         <?php } ?>
