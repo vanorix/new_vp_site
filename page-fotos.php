@@ -4,8 +4,7 @@
     <div class="home-title">
         <h1>Galeria de imagenes</h1>
     </div>
-    <div class="post-container">
-    <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+    <div class="posts-container">
         <?php $custom_query_args = array( 
                 'post_type' => 'multimedia',
                 'post_status' => 'publish',
@@ -30,8 +29,6 @@
         
             $wp_query = NULL;
         $wp_query = $temp_query; ?>
-    <?php endwhile; else: ?>
-    <?php endif; ?>
     </div>
     
 </div>
