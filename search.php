@@ -17,8 +17,8 @@
 		<div class="home-title">
 			<h3>No se encontraron resultados para la búsqueda: <span><?php echo get_search_query(); ?></span></h3>
 	    </div>
-	<div id="main-content" class="posts-container">
-		<div class="column ten left">
+	<div class="posts-container">
+		<div>
 			<h4>Sugerencias:</h4>
 			<ul class="linea-lista">
 				<li>Revisa la ortografía.</li>
@@ -26,7 +26,7 @@
 				<li>Prueba con un término diferente.</li>
 			</ul>
 		</div>
-		<div class="column six left">
+		<div>
 			<?php get_search_form(); ?>
 			<a href="<?php echo home_url(); ?>" class="view-article">Volver a la página de Inicio <i class="fa fa-long-arrow-right"></i></a>
 	    </div>
